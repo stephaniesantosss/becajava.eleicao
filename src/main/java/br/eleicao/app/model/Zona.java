@@ -8,36 +8,25 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Voto {
+public class Zona {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	private Long Id;
-	private int Codigo;
-	
-	public int getCodigo() {
-		return Codigo;
-	}
-	public void setCodigo(int codigo) {
-		Codigo = codigo;
-	}
 	public Long getId() {
 		return Id;
 	}
 	public void setId(Long id) {
 		Id = id;
 	}
+	public int getNumero() {
+		return Numero;
+	}
+	public void setNumero(int numero) {
+		Numero = numero;
+	}
+	private int Numero;
 	
-	@ManyToOne
-	@JoinColumn(name="CandidatoId")
-	private Candidato Candidato;
 	
-	@ManyToOne
-	@JoinColumn(name="EleitorId")
-	private Eleitor Eleitor;
-	
-	@ManyToOne
-	@JoinColumn(name="ZonaId")
-	private Zona Zona;
 
 }

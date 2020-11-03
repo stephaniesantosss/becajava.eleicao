@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Eleitor {
@@ -29,7 +27,5 @@ public class Eleitor {
 	public void setNome(String nome) {
 		Nome = nome;
 	}
-	@ManyToOne
-	@JoinColumn(name="VotoId")
-	private Voto Voto;
+	
 }
